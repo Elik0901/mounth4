@@ -15,17 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from posts.views import hello_v
-from posts.views import youtube_veiw
-from posts.views import google_veiw
-from posts.views import now_date
-from posts.views import goodbay
+from product.views import *
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("hello/", hello_v),
-    path("youtube/", youtube_veiw),
-    path('google/', google_veiw),
-    path('now_date/', now_date),
-    path('goodbay/', goodbay)
+    path('', main_page_view),
+    path('products/', products_view)
+
 ]
